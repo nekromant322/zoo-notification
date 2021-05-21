@@ -1,0 +1,14 @@
+server:
+  port: 6061
+  address: localhost
+
+logging:
+  file:
+    name: logs/app.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: ERROR
+    com.nekromant.zoo: INFO
+    org.hibernate: ERROR
