@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -34,6 +35,10 @@ public class SMSCServiceMock implements SMSCService {
      * или массив (<id>, -<код ошибки>) в случае ошибки
      */
     public ResponseEntity<String> sendSms(String phone, String message) {
+        // Проверка на возврат ошибки
+        if (true) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Не удалось отправить смс на номер " + phone);
+        }
         log.info("Сообщение с текстом:'{}' было успешно отправлено на номер {}", message, phone);
         return new ResponseEntity<>(HttpStatus.OK);
     }
