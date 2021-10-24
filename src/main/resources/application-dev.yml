@@ -1,25 +1,19 @@
-server:
-  port: 6061
-  address: localhost
+server.port: 6061
+server.address: localhost
 
-mail:
-  login: test@test.ru
-  password: password
-  sendRealEmails: false
-  transport:
-    protocol: smtp
-  smtp:
-    auth: true
-    starttls:
-      enable: true
-  debug: true
-  host: smtp.gmail.com
-  port: 587
+mail.login: test@test.ru
+mail.password: password
+mail.sendRealEmails: false
+mail.transport.protocol: smtp
+mail.smtp.auth: true
+mail.smtp.starttls.enable: true
+mail.debug: true
+mail.host: smtp.gmail.com
+mail.port: 587
 
-SMSC:
-  login: login
-  password: password
-  url: https://smsc.ru/sys/send.php
+SMSC.login: login
+SMSC.password: password
+SMSC.url: https://smsc.ru/sys/send.php
 
 spring:
   h2:
@@ -29,8 +23,7 @@ spring:
     password: root
     username: root
     url: jdbc:h2:mem:testdb
-    datasource:
-      driver-class-name: org.postgresql.Driver
+    datasource.driver-class-name: org.postgresql.Driver
   jpa:
     properties:
       hibernate:

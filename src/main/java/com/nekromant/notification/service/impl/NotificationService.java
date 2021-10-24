@@ -1,5 +1,6 @@
 package com.nekromant.notification.service.impl;
 
+import com.nekromant.notification.service.EmailService;
 import com.nekromant.notification.service.SMSCService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
