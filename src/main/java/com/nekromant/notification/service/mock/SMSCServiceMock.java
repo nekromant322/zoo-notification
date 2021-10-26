@@ -36,7 +36,7 @@ public class SMSCServiceMock implements SMSCService {
      */
     public ResponseEntity<String> sendSms(String phone, String message) {
         // Проверка на возврат ошибки
-        if (true) {
+        if (false) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Не удалось отправить смс на номер " + phone);
         }
         log.info("Сообщение с текстом:'{}' было успешно отправлено на номер {}", message, phone);

@@ -15,7 +15,7 @@ public class EmailServiceMock implements EmailService {
     @Override
     public ResponseEntity<String> sendEmail(String emailReceiver, String emailSubject, String emailText) {
         // Проверка на возврат ошибки
-        if (true) {
+        if (false) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Не удалось отправить рассылку на email " + emailReceiver);
         }
         log.info("Сообщение с текстом:'{}' и темой: '{}' было успешно отправлено на email {}", emailText, emailSubject, emailReceiver);
